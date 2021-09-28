@@ -1,10 +1,7 @@
+import os
 
-#folder_file = "C:\\Users\\root\\Documents\\Bot\\arquivo\\"
-# pastaPara = "C:\\Users\\root\\Documents\\Bot\\Nova_pasta\\"
-#root_dir = "C:\\Users\\root\\Documents\\Bot"
-# pego o caminho do diretório
-"""os.chdir(root_dir)
-print("Tudo certo!!")"""
+# Get user of system
+user = os.getcwd().split('\\')[2]
 
-# Path to folders
-folder_download = "C:\\Users\\root\\Downloads"
+# dir default with user
+folder_download = f"C:\\Users\\{user}\\Downloads"
