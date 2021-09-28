@@ -1,5 +1,5 @@
 import os.path
-from lib.make_dir import make_dir
+from src.make_dir import make_dir
 # import shutil
 #from time import sleep
 

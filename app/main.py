@@ -1,6 +1,6 @@
 import os.path
-from lib.type_file import type_f
-from lib.path import folder_download
+from src.type_file import type_f
+from src.path import folder_download
 # cria uma nova pasta
 # os.makedirs("arquivo", mode=0o777, exist_ok=False)
 
