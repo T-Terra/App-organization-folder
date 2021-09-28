@@ -12,7 +12,7 @@ if sys.platform == "win32":
 """
 setup(
     name="App-organization-folder",
-    version="0.0.1",
+    version="0.0.2",
     description="App-organization-folder",
     options={"biuld_exe": build_exe_options},
     executables=[Executable("src/observer.py")]

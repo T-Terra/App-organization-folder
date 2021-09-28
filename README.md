@@ -1,7 +1,11 @@
 # App-organization-folder
 
 
-#### Analisar os arquivos e pegar a extensão
+#### Para a execução do APP:
+    Build
+        exe.win-amd64-3.9
+            observer.exe
 
-#### Criar a pasta referente ao tipo do arquivo
+execute o arquivo --> observer.exe
+
  
