@@ -10,44 +10,41 @@ from src.type_file import *
 
 
 class manipulando_evento(FileSystemEventHandler):
-    @staticmethod
-    def on_created(event, **kwargs):
-        pass
-
-    def on_modified(self, event):
+    def on_any_event(self, event):
         if os.path.isdir(event.src_path):
             return
-        if is_code_file(event) == True:
+        if is_code_file(event):
             path_to_folder = make_dir('code')
             move_to_new_folder(event, path_to_folder)
             return
-        elif is_office_file(event) == True:
-            path_to_folder = make_dir('Arquivos_office')
+        elif is_office_file(event):
+            path_to_folder = make_dir('Arquivos office')
             move_to_new_folder(event, path_to_folder)
             return
-        elif is_pdf_file(event) == True:
+        elif is_pdf_file(event):
             path_to_folder = make_dir('PDF')
             move_to_new_folder(event, path_to_folder)
             return
-        elif is_text_file(event) == True:
+        elif is_text_file(event):
             path_to_folder = make_dir('TXT')
             move_to_new_folder(event, path_to_folder)
             return
-        elif is_photo_file(event) == True:
+        elif is_photo_file(event):
             path_to_folder = make_dir('Imagens')
             move_to_new_folder(event, path_to_folder)
             return
-        elif is_zip_file(event) == True:
+        elif is_zip_file(event):
             path_to_folder = make_dir('ZIP')
             move_to_new_folder(event, path_to_folder)
             return
-    @staticmethod
-    def on_moved(event, **kwargs):
-        pass
-
-    @staticmethod
-    def on_deleted(event, **kwargs):
-        pass
+        elif is_exe_file(event):
+            path_to_folder = make_dir('exe')
+            move_to_new_folder(event, path_to_folder)
+            return
+        elif is_video_file(event):
+            path_to_folder = make_dir('Vídeos')
+            move_to_new_folder(event, path_to_folder)
+            return
 
 
 eventos = manipulando_evento()
