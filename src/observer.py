@@ -7,7 +7,7 @@ from watchdog.observers import Observer
 from src.make_dir import make_dir
 from src.move_files import move_to_new_folder
 from src.type_file import *
-from src.path import folder_download
+from src.path import main_path
 
 
 class manipulando_evento(FileSystemEventHandler):
@@ -50,7 +50,7 @@ class manipulando_evento(FileSystemEventHandler):
 
 eventos = manipulando_evento()
 observer = Observer()
-observer.schedule(eventos, folder_download, recursive=False)
+observer.schedule(eventos, main_path, recursive=False)
 observer.start()
 try:
     while True:

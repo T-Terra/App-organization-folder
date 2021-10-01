@@ -1,10 +1,10 @@
 import os.path
-from src.path import folder_download
+from src.path import main_path
 
 
 def make_dir(dir_: str):
-    os.chdir(folder_download)
-    if os.path.exists(dir_) == True:
+    os.chdir(main_path)
+    if os.path.exists(dir_):
         print('Diretório já existe!!')
         return os.getcwd() + os.sep + str(dir_)
     else:

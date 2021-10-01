@@ -1,10 +1,18 @@
 import os
 
-# Get user of system
-user = os.getcwd().split('\\')[2]
+# Get disc of system
 disc = os.getcwd().split('\\')[0]
 
-# dir default with user
-folder_download = f"{disc}\\Users\\{user}\\Downloads"
+# Get folder user root
+folder_users = os.getcwd().split('\\')[1]
 
-print(folder_download)
+# Get user of system
+user = os.getcwd().split('\\')[2]
+
+# Get destination folder
+folders = ['Downloads', 'Documents', 'Desktop']
+
+# dir default with user
+main_path = f"{disc}\\{folder_users}\\{user}\\{folders[0]}"
+
+print(main_path)
