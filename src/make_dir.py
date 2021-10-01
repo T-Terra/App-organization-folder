@@ -1,5 +1,6 @@
 import os.path
 from src.path import main_path
+from logs.log import logs_msg
 
 
 def make_dir(dir_: str):
