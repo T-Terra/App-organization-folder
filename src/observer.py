@@ -4,13 +4,14 @@ import time
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
 
-from src.make_dir import *
-from src.move_files import *
+from src.make_dir import make_dir
+from src.move_files import move_to_new_folder
 from src.type_file import *
+from src.path import folder_download
 
 
 class manipulando_evento(FileSystemEventHandler):
-    def on_any_event(self, event):
+    def dispatch(self, event):
         if os.path.isdir(event.src_path):
             return
         if is_code_file(event):

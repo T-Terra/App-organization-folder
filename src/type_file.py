@@ -39,10 +39,12 @@ def is_zip_file(event):
         return True
     return False
 
+
 def is_exe_file(event):
     if extension_type(event) in ('exe', 'inf', 'torrent'):
         return True
     return False
+
 
 def is_video_file(event):
     if extension_type(event) in ('mp4', 'mp3', 'mkv', 'avi', 'mov'):
