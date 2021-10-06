@@ -11,7 +11,8 @@ from src.path import main_path
 
 
 class manipulando_evento(FileSystemEventHandler):
-    def dispatch(self, event):
+
+    def on_modified(self, event):
         if os.path.isdir(event.src_path):
             return
         if is_code_file(event):
@@ -19,7 +20,7 @@ class manipulando_evento(FileSystemEventHandler):
             move_to_new_folder(event, path_to_folder)
             return
         elif is_office_file(event):
-            path_to_folder = make_dir('Arquivos office')
+            path_to_folder = make_dir('Arquivos_office')
             move_to_new_folder(event, path_to_folder)
             return
         elif is_pdf_file(event):
@@ -44,6 +45,10 @@ class manipulando_evento(FileSystemEventHandler):
             return
         elif is_video_file(event):
             path_to_folder = make_dir('Vídeos')
+            move_to_new_folder(event, path_to_folder)
+            return
+        elif is_others_files(event):
+            path_to_folder = make_dir('Outros')
             move_to_new_folder(event, path_to_folder)
             return
 
