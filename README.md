@@ -2,10 +2,6 @@
 
 
 #### Para a execução do APP:
-    Build
-        exe.win-amd64-3.9
-            observer.exe
-
-execute o arquivo --> observer.exe
-
+    Baixe o instalador:
+        instalador.v0.0.4.Organizador_de_pastas.exe
  
