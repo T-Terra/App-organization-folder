@@ -13,7 +13,7 @@ TEXT_EXT = ('txt', 'log')
 ZIP_EXT = ('zip', 'rar')
 EXE_EXT = ('exe', 'inf', 'torrent', 'iss')
 VIDEO_EXT = ('mp4', 'mp3', 'mkv', 'avi', 'mov')
-OTHERS_EXT = 'ova'
+OTHERS_EXT = ('ova', 'iso')
 
 
 # Reading files

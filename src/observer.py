@@ -1,5 +1,5 @@
 import os
-import time
+from time import sleep
 
 from watchdog.events import FileSystemEventHandler
 from watchdog.observers import Observer
@@ -55,11 +55,11 @@ class manipulando_evento(FileSystemEventHandler):
 
 eventos = manipulando_evento()
 observer = Observer()
-observer.schedule(eventos, main_path, recursive=False)
+observer.schedule(eventos, main_path, recursive=True)
 observer.start()
 try:
     while True:
-        time.sleep(1)
+        sleep(1)
 except KeyboardInterrupt:
     observer.unschedule(eventos)
     observer.stop()
